@@ -20,20 +20,22 @@ public class FormularioRegistro extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
 
+
+
         // Panel Principal
         JPanel panel = new JPanel();
         panel.setLayout(null);
         panel.setBackground(new Color(245, 245, 245));
         add(panel);
 
-        // Encabezado / Título
+       
         JLabel lblTitulo = new JLabel("REGISTRO DE USUARIO");
         lblTitulo.setFont(new Font("Arial", Font.BOLD, 18));
         lblTitulo.setForeground(new Color(33, 33, 33));
         lblTitulo.setBounds(80, 20, 240, 30);
         panel.add(lblTitulo);
 
-        // Campo Usuario
+        
         JLabel lblUsuario = new JLabel("Usuario:");
         lblUsuario.setBounds(50, 70, 100, 25);
         panel.add(lblUsuario);
@@ -42,7 +44,7 @@ public class FormularioRegistro extends JFrame {
         txtUsuario.setBounds(50, 95, 280, 30);
         panel.add(txtUsuario);
 
-        // Campo Correo Electrónico
+      
         JLabel lblCorreo = new JLabel("Correo Electrónico:");
         lblCorreo.setBounds(50, 130, 150, 25);
         panel.add(lblCorreo);
@@ -51,7 +53,7 @@ public class FormularioRegistro extends JFrame {
         txtCorreo.setBounds(50, 155, 280, 30);
         panel.add(txtCorreo);
 
-        // Campo Contraseña
+       
         JLabel lblPassword = new JLabel("Contraseña:");
         lblPassword.setBounds(50, 190, 100, 25);
         panel.add(lblPassword);
@@ -60,7 +62,7 @@ public class FormularioRegistro extends JFrame {
         txtPassword.setBounds(50, 215, 280, 30);
         panel.add(txtPassword);
 
-        // Campo Confirmar Contraseña
+     
         JLabel lblConfirmar = new JLabel("Confirmar Contraseña:");
         lblConfirmar.setBounds(50, 250, 180, 25);
         panel.add(lblConfirmar);
@@ -69,7 +71,6 @@ public class FormularioRegistro extends JFrame {
         txtConfirmarPassword.setBounds(50, 275, 280, 30);
         panel.add(txtConfirmarPassword);
 
-        // Botón "Guardar Cuenta"
         btnRegistrar = new JButton("Guardar Cuenta");
         btnRegistrar.setBounds(50, 330, 280, 35);
         btnRegistrar.setBackground(new Color(46, 125, 50)); // Verde
@@ -77,7 +78,7 @@ public class FormularioRegistro extends JFrame {
         btnRegistrar.setFocusable(false);
         panel.add(btnRegistrar);
 
-        // Botón "Volver al Login"
+       
         btnVolverLogin = new JButton("¿Ya tienes cuenta? Inicia Sesión");
         btnVolverLogin.setBounds(50, 375, 280, 25);
         btnVolverLogin.setContentAreaFilled(false);
@@ -86,7 +87,7 @@ public class FormularioRegistro extends JFrame {
         btnVolverLogin.setCursor(new Cursor(Cursor.HAND_CURSOR));
         panel.add(btnVolverLogin);
 
-        // Programación de Eventos
+      
         btnRegistrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
