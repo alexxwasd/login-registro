@@ -12,11 +12,11 @@ public class LoginGrafico extends JFrame implements ActionListener {
     private JButton btnIngresar;
     private JButton btnRegistrar;
 
-    // Usuarios y contraseñas en memoria
+    
     private Map<String, String> usuarios = new HashMap<>();
 
     public LoginGrafico() {
-        // Usuario inicial por defecto
+        
         usuarios.put("admin", "1234");
 
         setTitle("Inicio de Sesión Seguro");
@@ -24,57 +24,57 @@ public class LoginGrafico extends JFrame implements ActionListener {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // Diseño principal por zonas (Norte, Centro)
+        
         setLayout(new BorderLayout(10, 10));
         getContentPane().setBackground(Color.WHITE);
 
-        // 1. PANEL SUPERIOR: AVATAR / CANDADO
+        
         JPanel panelAvatar = new JPanel();
         panelAvatar.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 20));
         panelAvatar.setBackground(Color.WHITE);
 
         try {
-            ImageIcon imgOriginal = new ImageIcon("user.png");
+            ImageIcon imgOriginal = new ImageIcon("user_icon.png");
             Image imgEscalada = imgOriginal.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
             JLabel lblAvatar = new JLabel(new ImageIcon(imgEscalada));
             panelAvatar.add(lblAvatar);
         } catch (Exception e) {
-            panelAvatar.add(new JLabel("Imagen user.png"));
+            panelAvatar.add(new JLabel("Imagen user_icon.png"));
         }
 
-        // 2. PANEL CENTRAL: FORMULARIO
+        
         JPanel panelFormulario = new JPanel();
         panelFormulario.setLayout(new GridLayout(3, 2, 10, 15));
         panelFormulario.setBackground(Color.WHITE);
         panelFormulario.setBorder(BorderFactory.createEmptyBorder(10, 30, 10, 30));
 
-        // Campo Usuario
+        
         JLabel lblUsuario = new JLabel("Usuario:");
         try {
-            ImageIcon icoUser = new ImageIcon("user.png");
+            ImageIcon icoUser = new ImageIcon("user_icon.png");
             Image icoUserEscalado = icoUser.getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH);
             lblUsuario.setIcon(new ImageIcon(icoUserEscalado));
         } catch (Exception e) {
-            System.out.println("no se encontró user.png");
+            System.out.println("no se encontró user_icon.png");
         }
         txtUsuario = new JTextField();
         panelFormulario.add(lblUsuario);
         panelFormulario.add(txtUsuario);
 
-        // Campo Contraseña
+        
         JLabel lblClave = new JLabel("Contraseña:");
         try {
-            ImageIcon icoLock = new ImageIcon("candado.png");
+            ImageIcon icoLock = new ImageIcon("candado_icon.png");
             Image icoLockEscalado = icoLock.getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH);
             lblClave.setIcon(new ImageIcon(icoLockEscalado));
         } catch (Exception e) {
-            System.out.println("no se encontró candado.png");
+            System.out.println("no se encontró candado_icon.png");
         }
         txtClave = new JPasswordField();
         panelFormulario.add(lblClave);
         panelFormulario.add(txtClave);
 
-        // Botones
+       
         btnRegistrar = new JButton("Crear Cuenta");
         btnRegistrar.setFont(new Font("Arial", Font.BOLD, 12));
         btnRegistrar.setBackground(new Color(46, 204, 113)); // Verde
@@ -92,7 +92,7 @@ public class LoginGrafico extends JFrame implements ActionListener {
         panelFormulario.add(btnRegistrar);
         panelFormulario.add(btnIngresar);
 
-        // Agregar paneles a la ventana
+        
         add(panelAvatar, BorderLayout.NORTH);
         add(panelFormulario, BorderLayout.CENTER);
     }
