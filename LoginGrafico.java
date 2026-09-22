@@ -34,12 +34,12 @@ public class LoginGrafico extends JFrame implements ActionListener {
         panelAvatar.setBackground(Color.WHITE);
 
         try {
-            ImageIcon imgOriginal = new ImageIcon("candado.png");
+            ImageIcon imgOriginal = new ImageIcon("user.png");
             Image imgEscalada = imgOriginal.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
             JLabel lblAvatar = new JLabel(new ImageIcon(imgEscalada));
             panelAvatar.add(lblAvatar);
         } catch (Exception e) {
-            panelAvatar.add(new JLabel("Imagen candado.png"));
+            panelAvatar.add(new JLabel("Imagen user.png"));
         }
 
         // 2. PANEL CENTRAL: FORMULARIO
